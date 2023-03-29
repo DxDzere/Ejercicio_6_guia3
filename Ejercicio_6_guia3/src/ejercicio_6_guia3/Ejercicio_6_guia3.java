@@ -19,6 +19,8 @@ public class Ejercicio_6_guia3 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int num1, num2, opc;
+        String rpta;
+        boolean bool = false;
         
         System.out.println("Ingrese 2 numeros para operar");
         System.out.println("1er numero: ");
@@ -49,8 +51,17 @@ public class Ejercicio_6_guia3 {
                 case 4:
                     System.out.println(num1+"/"+num2+"="+(num1/num2));
                     break;
+                case 5:
+                    System.out.println("Seguro desea salir? (S/N)");
+                    rpta = leer.nextLine();
+                    if(rpta.toUpperCase().equals("S")){
+                        bool=true;
+                    }else{
+                        bool=false;
+                    }
+                    break;
             }
-        }while(opc!=5);
+        }while(bool);
         
     }
     
